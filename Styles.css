@@ -1,0 +1,257 @@
+/* BODY STYLING */
+body{
+    background-image: url(Images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+/* NAVIGATION BAR STYLING */
+.Navbar{
+    width: 68%;
+    height: auto;
+    background-color: black;
+    opacity: 0.6;
+    margin-left: 240px;
+}
+/*  NAVIGATION BAR STYLING*/
+.Navbar ul{
+    background-color: black;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+
+/* NAVIGATION BAR STYLING */
+.Navbar li{
+    display: inline-flex;
+    padding: 4px 4px 4px 4px;
+}
+
+/* NAVIGATION BAR STYLING */
+nav ul li{
+    list-style-type: none; 
+    font-weight: bold;
+    color: #fffafa;   
+}
+
+/* HEADING STYLING */
+h1{
+    font-size: 70px;
+}
+
+/* FOOTER SECTION STYLING */
+footer{
+
+    width: 68%;
+    height: auto;
+    background-color: black;
+    border: 1px solid black;
+    opacity: 0.6;
+    margin-left: 240px;
+    padding: 20px;
+    color: white;
+}
+/* FOOTER SECTION STYLING */
+footer p{
+    font-weight: bold;
+    color: #fffafa;
+}
+
+/* RESPONSIVE DESIGN FOR LARGE SCREENS */
+@media (max-width: 800px){
+    /* BODY STYLING */
+body{
+    background-image: url(Images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #dddbcb; 
+    text-align: center;
+}
+
+/* NAVIGATION BAR STYLING */
+.Navbar{
+    width: 68%;
+    height: auto;
+    background-color: #483c32;
+    opacity: 0.6;
+    margin-left: 240px;
+}
+/*  NAVIGATION BAR STYLING*/
+.Navbar ul{
+    background-color: 483c32;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+
+/* NAVIGATION BAR STYLING */
+.Navbar li{
+    display: inline-block;
+    padding: 4px 4px 4px 4px;
+
+}
+
+/* NAVIGATION BAR STYLING */
+nav ul li{
+    list-style-type: none; 
+    font-weight: bold;
+    color: #fffafa;   
+}
+
+/* HEADING STYLING */
+h1{
+    font-size: 70px;
+}
+
+/* FOOTER SECTION STYLING */
+footer{
+
+    width: 68%;
+    height: auto;
+    background-color: #5b7553;
+    border: 1px solid black;
+    opacity: 0.6;
+    margin-left: 240px;
+    padding: 20px;
+    color: white;
+}
+/* FOOTER SECTION STYLING */
+footer p{
+    font-weight: bold;
+    color: #fffafa;
+}
+}
+
+/* RESPONSIVE DESIGNS FOR MEDIUM SCREENS  */
+@media (max-width: 991.98px){
+    /* BODY STYLING */
+body{
+    background-image: url(Images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #7d98a1;
+    text-align: center;
+    
+}
+
+/* NAVIGATION BAR STYLING */
+.Navbar{
+    width: 68%;
+    height: auto;
+    background-color: #aaaaaa;
+    opacity: 0.6;
+    margin-left: 240px;
+}
+/*  NAVIGATION BAR STYLING*/
+.Navbar ul{
+    background-color: #aaaaaa;
+    border: 1px solid black;
+    opacity: 0.6;
+    display: block;
+}
+
+/* NAVIGATION BAR STYLING */
+.Navbar li{
+    display: inline-block;
+    padding: 4px 4px 4px 4px;
+
+}
+
+/* NAVIGATION BAR STYLING */
+nav ul li{
+    list-style-type: none; 
+    font-weight: bold;
+    color: #fffafa;   
+}
+
+/* HEADING STYLING */
+h1{
+    font-size: 70px;
+}
+
+/* FOOTER SECTION STYLING */
+footer{
+
+    width: 68%;
+    height: auto;
+    background-color: #6f432a;
+    border: 1px solid black;
+    opacity: 0.6;
+    margin-left: 240px;
+    padding: 20px;
+    color: white;
+}
+/* FOOTER SECTION STYLING */
+footer p{
+    font-weight: bold;
+    color: #fffafa;
+}
+}
+
+
+/* RESPONSIVE DESIGN FOR SMALL SCREENS */
+@media (max-width: 767.98px){
+    /* BODY STYLING */
+body{
+    background-image: url(Images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #5b7553;
+    text-align: center;
+    display: block;
+}
+
+/* NAVIGATION BAR STYLING */
+.Navbar{
+    width: 68%;
+    height: auto;
+    background-color: #c5832b;
+    opacity: 0.6;
+    margin-left: 240px;
+}
+/*  NAVIGATION BAR STYLING*/
+.Navbar ul{
+    background-color: #c5832b;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+
+/* NAVIGATION BAR STYLING */
+.Navbar li{
+    display: co;
+    padding: 4px 4px 4px 4px;
+
+}
+
+/* NAVIGATION BAR STYLING */
+nav ul li{
+    list-style-type: none; 
+    font-weight: bold;
+    color: #fffafa;   
+}
+
+/* HEADING STYLING */
+h1{
+    font-size: 70px;
+}
+
+/* FOOTER SECTION STYLING */
+footer{
+
+    width: 68%;
+    height: auto;
+    background-color: #bf5700;
+    border: 1px solid black;
+    opacity: 0.6;
+    margin-left: 240px;
+    padding: 20px;
+    color: white;
+}
+/* FOOTER SECTION STYLING */
+footer p{
+    font-weight: bold;
+    color: #fffafa;
+}
+}
+
+
