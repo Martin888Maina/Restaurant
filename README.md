@@ -114,6 +114,35 @@ Potential improvements for future iterations:
 - Create a blog section for restaurant news and events
 - Implement animations and micro-interactions for enhanced user experience
 
+## Deployment
+
+### GitHub Pages
+
+To deploy this site to GitHub Pages:
+
+1. Push your code to a GitHub repository
+2. Go to repository Settings > Pages
+3. Select the branch to deploy (usually `main` or `master`)
+4. Click Save
+5. Your site will be available at `https://yourusername.github.io/Restaurant/`
+
+### Other Hosting Options
+
+This static site can be deployed to:
+- **Netlify**: Drag and drop the project folder
+- **Vercel**: Connect your GitHub repository
+- **Surge**: Run `npm install -g surge` and `surge` in the project directory
+
+## Contributing
+
+Contributions are welcome! If you'd like to improve this project:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
