@@ -1,13 +1,58 @@
-/* BODY STYLING */
+/* 
+ * Adare Restaurant - Stylesheet
+ * A modern, responsive design for an authentic Irish dining experience
+ */
+
+/* ============================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   ============================================ */
+:root {
+    /* Color palette */
+    --color-primary: #000000;
+    --color-text-light: #fffafa;
+    --color-overlay: rgba(0, 0, 0, 0.6);
+
+    /* Spacing */
+    --spacing-xs: 10px;
+    --spacing-sm: 20px;
+    --spacing-md: 40px;
+    --spacing-lg: 60px;
+
+    /* Typography */
+    --font-size-base: 16px;
+    --font-size-heading: 70px;
+
+    /* Layout */
+    --nav-width: 68%;
+    --nav-offset: 240px;
+}
+
+/* ============================================
+   GLOBAL RESET & BASE STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-image: url(Images/Background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--color-text-light);
     text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
 }
 
-/* ACCESSIBILITY: Screen reader only content */
+/* ============================================
+   ACCESSIBILITY UTILITIES
+   ============================================ */
+/* Hide content visually but keep it accessible to screen readers */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -20,303 +65,350 @@ body {
     border-width: 0;
 }
 
-/* HEADER STYLING */
-header {
-    padding-top: 20px;
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus {
+    outline: 2px solid var(--color-text-light);
+    outline-offset: 4px;
 }
 
-/* LOGO STYLING */
+/* ============================================
+   HEADER & LOGO
+   ============================================ */
+header {
+    padding: var(--spacing-sm) 0;
+    animation: fadeInDown 1s ease-out;
+}
+
 .restaurant-logo {
     max-width: 200px;
     height: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease;
 }
 
-/* MAIN CONTENT CONTAINER */
+.restaurant-logo:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.Navbar {
+    width: var(--nav-width);
+    margin: var(--spacing-sm) auto;
+    background-color: var(--color-overlay);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.2s ease-out;
+}
+
+.Navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: var(--spacing-xs) 0;
+    flex-wrap: wrap;
+}
+
+.Navbar li {
+    padding: var(--spacing-xs) 15px;
+}
+
+nav ul li a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Underline animation effect on hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-text-light);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+}
+
+/* ============================================
+   MAIN CONTENT CONTAINER
+   ============================================ */
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: var(--spacing-sm) 0;
 }
 
-/* RESERVATION LINK STYLING */
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    margin: var(--spacing-md) 0;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+h1 {
+    font-size: var(--font-size-heading);
+    font-weight: 300;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* ============================================
+   INTRODUCTION SECTION
+   ============================================ */
+.intro {
+    margin: var(--spacing-md) 0;
+    animation: fadeInUp 1.8s ease-out;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ============================================
+   CALL-TO-ACTION (RESERVATION)
+   ============================================ */
+.reservation-cta {
+    margin: var(--spacing-lg) 0;
+    animation: fadeInUp 2s ease-out;
+}
+
 .reservation-link {
+    display: inline-block;
     text-decoration: none;
-    color: white;
+    color: var(--color-text-light);
+    background-color: var(--color-overlay);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--color-text-light);
+    backdrop-filter: blur(10px);
 }
 
 .reservation-link:hover {
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+    background-color: var(--color-text-light);
+    color: var(--color-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-
-/* NAVIGATION BAR STYLING */
-.Navbar {
-    width: 68%;
-    height: auto;
-    background-color: black;
-    opacity: 0.6;
-    margin-left: 240px;
+.reservation-link p {
+    margin: 0;
 }
 
-/*  NAVIGATION BAR STYLING*/
-.Navbar ul {
-    background-color: black;
-    border: 1px solid black;
-    opacity: 0.6;
+/* ============================================
+   LOCATION SECTION (MAP)
+   ============================================ */
+.location {
+    margin: var(--spacing-lg) 0;
+    width: 100%;
+    max-width: 1024px;
+    animation: fadeInUp 2.2s ease-out;
 }
 
-/* NAVIGATION BAR STYLING */
-.Navbar li {
-    display: inline-flex;
-    padding: 4px 4px 4px 4px;
+.location iframe {
+    width: 100%;
+    max-width: 1024px;
+    height: 500px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* NAVIGATION BAR STYLING */
-/* NAVIGATION BAR STYLING */
-nav ul li {
-    list-style-type: none;
-    font-weight: bold;
-    color: #fffafa;
-}
-
-/* NAVIGATION LINK STYLING */
-nav ul li a {
-    color: #fffafa;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-}
-
-nav ul li a:hover {
-    opacity: 0.7;
-}
-
-/* HEADING STYLING */
-h1 {
-    font-size: 70px;
-}
-
-
-/* FOOTER SECTION STYLING */
+/* ============================================
+   FOOTER
+   ============================================ */
 footer {
-
-    width: 68%;
-    height: auto;
-    background-color: black;
-    border: 1px solid black;
-    opacity: 0.6;
-    margin-left: 240px;
-    padding: 20px;
-    color: white;
+    width: var(--nav-width);
+    margin: var(--spacing-lg) auto var(--spacing-sm);
+    background-color: var(--color-overlay);
+    border-radius: 8px;
+    padding: var(--spacing-sm);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 2.5s ease-out;
 }
 
-/* FOOTER SECTION STYLING */
 footer p {
     font-weight: bold;
-    color: #fffafa;
+    color: var(--color-text-light);
+    font-size: 14px;
+    margin: 0;
 }
 
-/* RESPONSIVE DESIGN FOR LARGE SCREENS */
-@media (max-width: 800px) {
-
-    /* BODY STYLING */
-    body {
-        background-image: url(Images/Background.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: #dddbcb;
-        text-align: center;
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
 
-    /* NAVIGATION BAR STYLING */
-    .Navbar {
-        width: 68%;
-        height: auto;
-        background-color: #483c32;
-        opacity: 0.6;
-        margin-left: 240px;
-    }
-
-    /*  NAVIGATION BAR STYLING*/
-    .Navbar ul {
-        background-color: 483c32;
-        border: 1px solid black;
-        opacity: 0.6;
-    }
-
-    /* NAVIGATION BAR STYLING */
-    .Navbar li {
-        display: inline-block;
-        padding: 4px 4px 4px 4px;
-
-    }
-
-    /* NAVIGATION BAR STYLING */
-    nav ul li {
-        list-style-type: none;
-        font-weight: bold;
-        color: #fffafa;
-    }
-
-    /* HEADING STYLING */
-    h1 {
-        font-size: 70px;
-    }
-
-    /* FOOTER SECTION STYLING */
-    footer {
-
-        width: 68%;
-        height: auto;
-        background-color: #5b7553;
-        border: 1px solid black;
-        opacity: 0.6;
-        margin-left: 240px;
-        padding: 20px;
-        color: white;
-    }
-
-    /* FOOTER SECTION STYLING */
-    footer p {
-        font-weight: bold;
-        color: #fffafa;
+    to {
+        opacity: 1;
     }
 }
 
-/* RESPONSIVE DESIGNS FOR MEDIUM SCREENS  */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLET
+   ============================================ */
 @media (max-width: 991.98px) {
-
-    /* BODY STYLING */
-    body {
-        background-image: url(Images/Background.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: #7d98a1;
-        text-align: center;
-
+    :root {
+        --nav-width: 85%;
+        --font-size-heading: 60px;
     }
 
-    /* NAVIGATION BAR STYLING */
     .Navbar {
-        width: 68%;
-        height: auto;
-        background-color: #aaaaaa;
-        opacity: 0.6;
-        margin-left: 240px;
+        margin: var(--spacing-sm) auto;
     }
 
-    /*  NAVIGATION BAR STYLING*/
     .Navbar ul {
-        background-color: #aaaaaa;
-        border: 1px solid black;
-        opacity: 0.6;
-        display: block;
+        flex-direction: row;
     }
 
-    /* NAVIGATION BAR STYLING */
-    .Navbar li {
-        display: inline-block;
-        padding: 4px 4px 4px 4px;
-
+    nav ul li a {
+        font-size: 13px;
     }
 
-    /* NAVIGATION BAR STYLING */
-    nav ul li {
-        list-style-type: none;
-        font-weight: bold;
-        color: #fffafa;
+    .intro p {
+        font-size: 16px;
+        padding: 0 var(--spacing-sm);
     }
 
-    /* HEADING STYLING */
-    h1 {
-        font-size: 70px;
-    }
-
-    /* FOOTER SECTION STYLING */
-    footer {
-
-        width: 68%;
-        height: auto;
-        background-color: #6f432a;
-        border: 1px solid black;
-        opacity: 0.6;
-        margin-left: 240px;
-        padding: 20px;
-        color: white;
-    }
-
-    /* FOOTER SECTION STYLING */
-    footer p {
-        font-weight: bold;
-        color: #fffafa;
+    .location iframe {
+        height: 400px;
     }
 }
 
-
-/* RESPONSIVE DESIGN FOR SMALL SCREENS */
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE
+   ============================================ */
 @media (max-width: 767.98px) {
+    :root {
+        --nav-width: 95%;
+        --font-size-heading: 48px;
+        --spacing-md: 30px;
+        --spacing-lg: 40px;
+    }
 
-    /* BODY STYLING */
     body {
-        background-image: url(Images/Background.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: #5b7553;
-        text-align: center;
-        display: block;
+        background-attachment: scroll;
     }
 
-    /* NAVIGATION BAR STYLING */
-    .Navbar {
-        width: 68%;
-        height: auto;
-        background-color: #c5832b;
-        opacity: 0.6;
-        margin-left: 240px;
+    .restaurant-logo {
+        max-width: 150px;
     }
 
-    /*  NAVIGATION BAR STYLING*/
     .Navbar ul {
-        background-color: #c5832b;
-        border: 1px solid black;
-        opacity: 0.6;
+        flex-direction: column;
+        padding: var(--spacing-sm) 0;
     }
 
-    /* NAVIGATION BAR STYLING */
     .Navbar li {
-        display: co;
-        padding: 4px 4px 4px 4px;
-
+        padding: var(--spacing-xs) 0;
+        width: 100%;
     }
 
-    /* NAVIGATION BAR STYLING */
-    nav ul li {
-        list-style-type: none;
-        font-weight: bold;
-        color: #fffafa;
+    nav ul li a {
+        display: block;
+        padding: var(--spacing-xs);
     }
 
-    /* HEADING STYLING */
     h1 {
-        font-size: 70px;
+        font-size: var(--font-size-heading);
+        padding: 0 var(--spacing-sm);
     }
 
-    /* FOOTER SECTION STYLING */
+    .intro p {
+        font-size: 15px;
+        padding: 0 var(--spacing-sm);
+    }
+
+    .intro p br {
+        display: none;
+    }
+
+    .reservation-link {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    .location iframe {
+        height: 300px;
+        border-radius: 8px;
+    }
+
     footer {
-
-        width: 68%;
-        height: auto;
-        background-color: #bf5700;
-        border: 1px solid black;
-        opacity: 0.6;
-        margin-left: 240px;
-        padding: 20px;
-        color: white;
+        width: 95%;
+        padding: var(--spacing-sm) var(--spacing-xs);
     }
 
-    /* FOOTER SECTION STYLING */
     footer p {
-        font-weight: bold;
-        color: #fffafa;
+        font-size: 12px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - SMALL MOBILE
+   ============================================ */
+@media (max-width: 480px) {
+    :root {
+        --font-size-heading: 36px;
+    }
+
+    .restaurant-logo {
+        max-width: 120px;
+    }
+
+    .location iframe {
+        height: 250px;
     }
 }
