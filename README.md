@@ -1,5 +1,7 @@
 # Adare Restaurant Landing Page
 
+**Live site:** [restaurant.martinmaina.dev](https://restaurant.martinmaina.dev)
+
 A modern, elegant landing page for Adare Restaurant, an Irish dining establishment located in County Limerick, Ireland. This project showcases a clean, single-page design highlighting the restaurant's atmosphere, location, and reservation options.
 
 ## Table of Contents
@@ -116,22 +118,16 @@ Potential improvements for future iterations:
 
 ## Deployment
 
-### GitHub Pages
+The live site is served from a Digital Ocean droplet, reverse-proxied through Nginx with Let's Encrypt TLS, at [restaurant.martinmaina.dev](https://restaurant.martinmaina.dev).
 
-To deploy this site to GitHub Pages:
+Because the project is a static HTML/CSS site with no build step, deployment is straightforward — clone the repo into `/var/www/restaurant` on the server, point an Nginx server block at that directory with `index index.html;`, and issue a certificate with Certbot.
 
-1. Push your code to a GitHub repository
-2. Go to repository Settings > Pages
-3. Select the branch to deploy (usually `main` or `master`)
-4. Click Save
-5. Your site will be available at `https://yourusername.github.io/Restaurant/`
+Since this is a pure static site, it can also be hosted on any static-host provider:
 
-### Other Hosting Options
-
-This static site can be deployed to:
-- **Netlify**: Drag and drop the project folder
-- **Vercel**: Connect your GitHub repository
-- **Surge**: Run `npm install -g surge` and `surge` in the project directory
+- **GitHub Pages**: enable Pages under repository Settings → Pages on the `master` branch
+- **Netlify**: connect the repository or drag-and-drop the project folder
+- **Vercel**: import the repository from GitHub
+- **Surge**: `npm install -g surge` then run `surge` in the project directory
 
 ## Contributing
 
