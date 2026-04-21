@@ -51,3 +51,10 @@ build/
 .env
 .env.local
 .env.production
+
+# Local deployment strategy docs (never push to GitHub)
+Digital Ocean Deployment Strategy.md
+GITHUB strategy for portfolio project application to be deployed to digital ocean.md
+complete guide to get started and configure digital ocean.md
+converting development code to production code.md
+digital ocean start up guide.md
