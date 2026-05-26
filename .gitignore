@@ -58,3 +58,14 @@ GITHUB strategy for portfolio project application to be deployed to digital ocea
 complete guide to get started and configure digital ocean.md
 converting development code to production code.md
 digital ocean start up guide.md
+
+# Claude Code and AI tool output files
+.claude/
+MEMORY.md
+*.claude
+
+# Operational guides and implementation docs (not for public repo)
+COMPLETE GUIDE*.txt
+SECURITY CONSIDERATIONS*.txt
+HOW TO*.md
+IMPLEMENTING PROPER*.md
